@@ -1,6 +1,6 @@
 const express = require("express");
 
-const TarefasRoutes = require("./routes/TarefasRoutes");
+const PersonsRoutes = require("./routes/PersonsRoutes");
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.get("/", (request, response) => {
   response.send("<h1>Seja bem vindo!</h1>");
 });
 
-app.use("/api/lista-tarefas", TarefasRoutes);
+app.use("/api/persons", PersonsRoutes);
 
 const PORT = 3001;
 app.listen(PORT, () => {
